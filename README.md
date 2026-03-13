@@ -104,14 +104,14 @@ git apply /path/to/indexcache.patch
 
 Configure via `--json-model-override-args`. Two options:
 
-#### Option A — Uniform frequency
+#### Option A — Uniform interleaving
 
 Every N-th layer keeps its indexer:
 
 ```bash
 python -m sglang.launch_server \
     --model-path zai-org/GLM-5-FP8 \
-    --json-model-override-args '{"index_topk_freq": 4}' \
+    --json-model-override-args '{"index_topk_freq": 2}' \
     ...  # your other args (tp, dp, etc.)
 ```
 
